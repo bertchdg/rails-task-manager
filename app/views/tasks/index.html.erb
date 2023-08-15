@@ -1,7 +1,9 @@
+<div class="card m-5 p-3">
+<div class="card-body">
 <h1>My Tasks</h1>
 <ul class="list-group">
   <% @tasks.each do |task| %>
-  <li class="list-group-item">
+  <li class="list-group-item  m-1 p-2 bc-gray">
     <%= task.completed ? "Y" : "N" %>
     <label class="form-check-label" for="firstCheckbox"><%= link_to task.title, task_path(task) %>
     <%= link_to "x",
@@ -11,4 +13,7 @@
   </li>
 </ul>
   <% end %>
+  <div class="card-body p-1 m-2">
 <%= link_to "Create a new Task", new_task_path %>
+</div>
+</div>
